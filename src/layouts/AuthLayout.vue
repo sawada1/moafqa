@@ -121,3 +121,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.auth-container-custom{
+  background-color: #4A90E2;
+}
+</style>
