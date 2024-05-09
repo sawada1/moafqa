@@ -50575,6 +50575,18 @@ input::file-selector-button {
   opacity: 0.5;
 }
 
+.auth-container-custom .logo_float {
+  width: 150px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.auth-container-custom .logo_float img{
+width: 100%;
+
+}
+
 [data-bs-theme=light] {
   --bs-page-bg: #ffffff;
   --bs-app-blank-bg: #ffffff;

@@ -36,11 +36,11 @@
     <!--begin::Aside-->
     <div
       class="d-flex flex-lg-row-fluid auth-container-custom w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2"
-      :style="`background-image: url('${getAssetPath(
-        './public/media/misc/auth-img-main1.jpeg'
-      )}')`"
     >
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
+    <div class="logo_float">
+     <img src="/public/media/logos/Logo-m.svg" alt="">
+    </div>
       <!--begin::Content-->
       <div
         class="d-flex flex-column flex-center py-7 py-lg-15 px-5 px-md-15 w-100"

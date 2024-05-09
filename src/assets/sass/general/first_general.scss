@@ -75,6 +75,16 @@ input::file-selector-button {
       background-color: #000;
       opacity: 0.5;
     }
+    .logo_float{
+      width: 150px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      img{
+      width: 100%;
+      }
+    }
   }
 
   .el-textarea__inner , textarea{
