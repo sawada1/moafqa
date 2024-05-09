@@ -1,0 +1,83 @@
+@import "../components/_variables.custom.scss";
+
+.el-input__inner{
+    
+}
+
+input::file-selector-button {
+    font-weight: bold;
+    color: $primary;
+    padding: 0px;
+    border: none;
+    background-color:transparent;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .indicator-label{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .swal2-icon.swal2-success , .swal2-icon.swal2-success .swal2-success-ring    {
+    border-color: #a5dc86 !important;
+    color: #a5dc86 !important;
+  }
+  .swal2-icon.swal2-success [class^=swal2-success-line]{
+    background-color: #a5dc86 !important;
+
+  }
+
+  .error-from-server{
+    font-size: 12px;
+    color: #f56c6c;
+  }
+
+  .custom-menu-container {
+    position: relative;
+    box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+    background-color: #fff;
+    border-radius: 6px;
+    z-index: 111;
+    .link-menu-custom {
+    }
+  }
+
+  .leaflet-control-attribution{
+    a{
+      display: none !important;
+    }
+  }
+
+  .editMap{
+    cursor: pointer;
+    font-size: 16px;
+    // color: #a5dc86;
+    font-weight: 600;
+  }
+
+  #map2{
+    &.active{
+      height: 300px;
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .auth-container-custom{
+    position: relative;
+    .overlay{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.5;
+    }
+  }
+
+  .el-textarea__inner , textarea{
+    resize: none;
+  }
+  

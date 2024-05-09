@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Metronic Vue Demo" />
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700">
+  <link rel="stylesheet" href="/splash-screen.css">
+  <link rel="stylesheet" id="styleid" href="/src/assets/rtl/style-rtl.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> mowafqa </title>
+</head>
+<script>
+  const locale = localStorage.getItem('lang') || 'en';
+
+  if(locale == 'ar'){
+   document.documentElement.dir = 'rtl';
+   document.documentElement.lang = 'ar';
+  } else{
+    document.documentElement.dir = 'ltr';
+    document.documentElement.lang = 'en';
+  }
+
+  const cssPath = locale === 'ar' ? '/src/assets/rtl/style-rtl.css' : '/src/assets/sass/style.scss';
+  const cssLink = document.createElement('link');
+  cssLink.rel = 'stylesheet';
+  cssLink.href = cssPath;
+  document.getElementById('styleid').setAttribute("href" , cssPath);
+</script>
+
+<body class="page-loading">
+    <!--begin::Theme mode setup on page load-->
+    <script>
+        let themeMode = "system";
+
+        if (localStorage.getItem("kt_theme_mode_value")) {
+            themeMode = localStorage.getItem("kt_theme_mode_value");
+        }
+
+        if (themeMode === "system") {
+            themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+
+        document.documentElement.setAttribute("data-bs-theme", themeMode);
+    </script>
+    <!--end::Theme mode setup on page load-->
+
+    <div id="app"></div>
+
+    <!--begin::Loading markup-->
+    <div id="splash-screen" class="splash-screen">
+        <img src="/public/media/logos/Logo-m.svg" class="dark-logo" alt="Keenthemes dark logo" />
+        <img src="/public/media/logos/Logo-m.svg" class="light-logo" alt="Keenthemes light logo" />
+        <div class="loader-wrapper">
+        <span class="loader"></span>
+        <span class="loading-text">Loading...</span>
+        </div>
+    </div>
+    <!--end::Loading markup-->
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "AIzaSyDu4T0sSqqn87uvqXHcUbbWpxt4NVyBW6w",
+          v: "weekly",
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        });
+      </script>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
